@@ -1,0 +1,290 @@
+html {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: 62.5%;
+    background-image: radial-gradient(circle at top,hsl(214, 47%, 23%),hsl(237, 49%, 15%));
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 95.9vh;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.header-score {
+    width: 50%;
+    height: 13%;
+    border-radius: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    border: .2rem solid hsl(217, 16%, 45%);
+    padding: 1rem 2rem 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.game-name_title {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 0;
+}
+
+.score-box {
+    width: 10%;
+    padding: 1rem;
+    height: 60%;
+    background-color: white;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0.1rem 0.1rem 0.5rem black;
+}
+.score-title {
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 700;
+    color: hsl(229, 64%, 46%);
+    margin: 0;
+    letter-spacing: .2rem;
+}
+
+.score {
+    color: hsl(229, 25%, 31%);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 600;
+    font-size: 4rem;
+    margin: 0;
+}
+
+.rules-btn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 5rem;
+    margin-right: 5rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 600;
+    color: white;
+    border: .2rem solid hsl(217, 16%, 45%);
+    border-radius: .98em;
+    padding: 1rem 3rem 1rem 3rem;
+}
+
+.rules-btn:hover {
+    background-color: hsl(217, 16%, 45%);
+    transition: all .3s;
+}
+
+.choices-box {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.choices{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.paper {
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    border: 2rem solid hsl(230, 89%, 62%)  ;
+}
+
+.choice-style {
+    padding: 3rem;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.rock {
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translateX(-50%);
+    border: 2rem solid hsl(349, 71%, 52%);
+}
+
+.scissors {
+    position: absolute;
+    top: 10%;
+    right: 20%;
+    border: 2rem solid hsl(39, 89%, 49%);
+}
+
+.paper-rock-line {
+    width: 20%;
+    height: 1rem;
+    background-color: rgba(0, 0, 0, 0.253);
+    position: absolute;
+    top: 32%;
+    left: 38%;
+    z-index: -1;
+}
+
+.rock-scissors-line {
+    width: 20%;
+    height: 1rem;
+    background-color: rgba(0, 0, 0, 0.253);
+    position: absolute;
+    top: 60%;
+    left: 30%;
+    z-index: -1;
+    transform: rotate(45deg);
+}
+
+.scissors-paper-line {
+    width: 20%;
+    height: 1rem;
+    background-color: rgba(0, 0, 0, 0.253);
+    position: absolute;
+    top: 60%;
+    right: 30%;
+    z-index: -1;
+    transform: rotate(-45deg);
+}
+
+.rules-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    padding: 1rem 2rem 2rem 2rem;
+    border-radius: .8rem;
+    z-index: 1000;
+    display: none;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+.rules-box__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.rules-title {
+    text-transform: uppercase;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color:hsl(229, 64%, 46%);
+}
+
+.black-background {
+    width: 100%;
+    height: 102.5%;
+    background-color: rgba(0, 0, 0, 0.479);
+    z-index: 1000;
+    position: absolute;
+    top: -2.5%;
+    display: none;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+}
+
+.picked-choice-box {
+    display: flex;
+    position: absolute;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+    height: 30%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.choice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.choice-title{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: white;
+}
+
+.visible {
+    display: block;
+}
+
+.invisible {
+    display: none;
+}
+
+.scissors-chosen {
+    border: 2rem solid hsl(39, 89%, 49%);
+}
+
+.paper-chosen {
+    border: 2rem solid hsl(230, 89%, 62%)  ;
+}
+
+.rock-chosen {
+    border: 2rem solid hsl(349, 71%, 52%);
+}
+
+.next-round {
+    text-align: center;
+}
+
+.result-text {
+    margin-bottom: 3rem;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 600;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    color: white;
+}
+
+.play-again-btn {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color:hsl(229, 64%, 46%);
+    text-decoration: none;
+    background-color: white;
+    padding: 1rem 3rem 1rem 3rem;
+    border-radius: .7rem;
+    letter-spacing: .3rem;
+    
+}
+

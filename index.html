@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
+  </head>
+  <body>
+    <div class="black-background"></div>
+    <header class="header-score">
+      <div class="game-name">
+        <p class="game-name_title">Rock</p>
+        <p class="game-name_title">Paper</p>
+        <p class="game-name_title">Scissors</p>
+      </div>
+      <div class="score-box">
+        <h3 class="score-title">score</h3>
+        <p class="score">12</p>
+      </div>
+    </header>
+
+    <main>
+      <div class="choices-box ">
+        <div class="choices">
+          <div class="paper choice-style">
+            <img src="images/icon-paper.svg" alt="" class="game-paper" />
+          </div>
+          <div class="paper-rock-line"></div>
+          <div class="rock choice-style">
+            <img src="images/icon-rock.svg" alt="" class="game-rock" />
+          </div>
+          <div class="rock-scissors-line"></div>
+          <div class="scissors choice-style">
+            <img src="images/icon-scissors.svg" alt="" class="game-scissors" />
+          </div>
+          <div class="scissors-paper-line"></div>
+        </div>
+      </div>
+
+      <div class="picked-choice-box invisible">
+        <div class="user choice">
+          <p class="choice-title">you picked</p>
+          <div class="user-choice-box">
+            <img
+              src="images/icon-scissors.svg"
+              alt=""
+              class="user-choice choice-style scissors-chosen"
+              id="user-choice-id"
+            />
+          </div>
+        </div>
+        <div class="next-round">
+          <p class="result-text">You lose</p>
+          <a href="#" class="play-again-btn">Play again</a>
+        </div>
+        <div class="computer choice">
+          <p class="choice-title">The house picked</p>
+          <div class="computer-choice-box">
+            <img
+              src="images/icon-scissors.svg"
+              alt=""
+              class="computer-choice choice-style scissors-chosen"
+              id="computer-choice-id"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="rules-box">
+        <div class="rules-box__title">
+          <h3 class="rules-title">rules</h3>
+          <div class="icon-close-box">
+            <img src="images/icon-close.svg" alt="" class="icon-close" />
+          </div>
+        </div>
+        <img src="images/image-rules.svg" alt="" class="rules" />
+      </div>
+      <a href="#" class="rules-btn" id="rules-btn">rules</a>
+    </main>
+    <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Mostafa Saad</a>.
+  </div> -->
+  </body>
+</html>
