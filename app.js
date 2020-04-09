@@ -41,18 +41,16 @@ const getComputerChoice = () => {
     let random =  Math.floor(Math.random() * 3)
     let choices = [ROCK_VALUE, PAPER_VALUE, SCISSORS_VALUE];
     let computerChoice = choices[random];
-    console.log(computerChoice);
+    // console.log(computerChoice);
     return computerChoice;
 }
 
-const controlChoice = (userChoiceClass, userChoice, computerChoiceClass, computerChoice) => {
+const controlChoice = (userChoice, computerChoice) => {
     choicesBox.classList.add('invisible');
     pickedChoiceBox.classList.remove('invisible');
-    userChoiceUI.classList.remove('scissors-chosen');
-    userChoiceUI.classList.add(userChoiceClass);
+    userChoiceUI.className = `user-choice choice-style ${userChoice}-chosen`
     userChoiceID.src= `images/icon-${userChoice}.svg`;
-    computerChoiceUI.classList.remove('scissors-chosen');
-    computerChoiceUI.classList.add(computerChoiceClass);
+    computerChoiceUI.className = `computer-choice choice-style ${computerChoice}-chosen`;
     computerChoiceID.src= `images/icon-${computerChoice}.svg`;
 }
 
@@ -67,9 +65,9 @@ const reset = () => {
 const setPaperOption = () => {
     userChoice = PAPER_VALUE;
     computerChoice = getComputerChoice();
-    controlChoice(`${userChoice}-chosen`,userChoice, `${computerChoice}-chosen`, computerChoice);
+    controlChoice(userChoice, computerChoice);
     let result = gameLogic(computerChoice, userChoice,);
-    console.log(result)
+    // console.log(result)
     if(result === RESULT_PLAYER_WINS) {
         score++;
         scoreCounter.innerHTML = score;
@@ -82,9 +80,9 @@ const setPaperOption = () => {
 const setRockOption = () => {
     userChoice = ROCK_VALUE;
     computerChoice = getComputerChoice();
-    controlChoice(`${userChoice}-chosen`,userChoice, `${computerChoice}-chosen`, computerChoice);
+    controlChoice(userChoice,  computerChoice);
     let result = gameLogic(computerChoice, userChoice);
-    console.log(result)
+    // console.log(result)
     if(result === RESULT_PLAYER_WINS) {
         score++;
         scoreCounter.innerHTML = score;
@@ -97,9 +95,9 @@ const setRockOption = () => {
 const setScissorsOption = () => {
     userChoice = SCISSORS_VALUE;
     computerChoice = getComputerChoice();
-    controlChoice(`${userChoice}-chosen`,userChoice, `${computerChoice}-chosen`, computerChoice);
+    controlChoice(userChoice,  computerChoice);
     let result = gameLogic(computerChoice, userChoice);
-    console.log(result)
+    // console.log(result)
     if(result === RESULT_PLAYER_WINS) {
         score++;
         scoreCounter.innerHTML = score;
