@@ -1,19 +1,32 @@
 html {
-    padding: 0;
-    margin: 0;
+    font-size: 62.5%;
 }
 
+@media (min-width: 1440px) {
+    html {
+        font-size: 90%;
+    }
+}
+
+@media (max-width: 375px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+
+
 body {
-    font-size: 62.5%;
     background-image: radial-gradient(circle at top,hsl(214, 47%, 23%),hsl(237, 49%, 15%));
     background-repeat: no-repeat;
     background-size: cover;
-    height: 95.9vh;
+    height: 97.1vh;
     box-sizing: border-box;
     position: relative;
     animation: fadeIn;
-    animation-duration: 3s;
+    animation-duration: 2s;
 }
+
 
 .header-score {
     width: 50%;
@@ -51,6 +64,12 @@ body {
     justify-content: center;
     box-shadow: 0.1rem 0.1rem 0.5rem black;
 }
+@media (max-width: 375px) {
+    .score-box {
+        padding: 2rem;
+    }
+}
+
 .score-title {
     text-transform: uppercase;
     font-size: 1rem;
@@ -138,13 +157,65 @@ body {
     border: 2rem solid hsl(39, 89%, 49%);
 }
 
+@media (max-width: 375px) {
+    .paper {
+        left: -30%;
+    }
+    .rock {
+        position: absolute;
+        left: 50%;
+        top: 60%;
+        transform: translateX(-50%);
+        border: 2rem solid hsl(349, 71%, 52%);
+    }
+    .scissors {
+        right: -30%;
+    }
+
+}
+
+@media only screen and (max-width: 1440px) {
+    .paper-rock-line {
+        width: 40%;
+        height: 1rem;
+        background-color: rgba(0, 0, 0, 0.253);
+        position: absolute;
+        top: 32%;
+        left: 40%;
+        z-index: -1;
+    }
+    
+    .rock-scissors-line {
+        width: 20%;
+        height: 1rem;
+        background-color: rgba(0, 0, 0, 0.253);
+        position: absolute;
+        top: 60%;
+        left: 30%;
+        z-index: -1;
+        transform: rotate(45deg);
+    }
+    
+    .scissors-paper-line {
+        width: 20%;
+        height: 1rem;
+        background-color: rgba(0, 0, 0, 0.253);
+        position: absolute;
+        top: 60%;
+        right: 30%;
+        z-index: -1;
+        transform: rotate(-45deg);
+    }
+}
+
+
 .paper-rock-line {
     width: 20%;
     height: 1rem;
     background-color: rgba(0, 0, 0, 0.253);
     position: absolute;
     top: 32%;
-    left: 38%;
+    left: 40%;
     z-index: -1;
 }
 
@@ -231,7 +302,7 @@ body {
     left: 50%;
     transform: translate(-50%,-50%);
     animation: fadeIn;
-    animation-duration: 3s;
+    animation-duration: 2s;
 }
 
 .choice {
